@@ -1,0 +1,27 @@
+body { margin: 0; height: 100vh; overflow: hidden; background: #eee; }
+
+.car {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 200px;             
+  height: 60px;
+  background: #000;         
+  animation: drive 4s linear forwards;
+}
+
+.car::after {
+  content: "";
+  position: absolute;
+  left: 20px;
+  top: 100%;
+  width: 40px;
+  height: 40px;
+  background: #666;
+  box-shadow: 120px 0 0 #666;
+}
+
+@keyframes drive {
+  from { transform: translateX(-230px); }
+  to   { transform: translateX(calc(100vw - 250px)); }
+}
